@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, NavLink, useNavigate, Outlet, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, NavLink, useNavigate, Outlet, Link } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
 import './App.css';
@@ -15,9 +15,9 @@ import compass from './assets/compass.png';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <App />
-    </BrowserRouter>
+    </HashRouter>
 )
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         <Routes>
             <Route path="/" element={<LandingPage />} />
 
-            <Route path="/" element={<Header />}>
+            <Route element={<Header />}>
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/gear" element={<Gear />} />
             </Route>
@@ -66,8 +66,8 @@ function Header() {
             </div>
             <footer>
                 <nav>
-                    <NavLink id="prof" to="/profile" end>Profile</NavLink>
-                    <NavLink id="gear" to="/gear" end>Gear</NavLink>
+                    <NavLink id="prof" tag = {Link} to="/profile" end>Profile</NavLink>
+                    <NavLink id="gear" tag = {Link} to="/gear" end>Gear</NavLink>
                 </nav>
                 <p>
                     UI Inspiration and logos from Zenless Zone Zero <br></br>
