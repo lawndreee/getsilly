@@ -1,38 +1,339 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'zenless';
+  src: url('./assets/zenless.ttf');
+}
+#back {
+  width: 70px;
+  height: auto;
+  margin: 1% 0 0 2%;
+  position: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  animation: bg 30s infinite linear;
+  background-color: #000000;
+  background-image: url('./assets/eee.png'), url('./assets/aaa.png');
+  background-size: 350px, cover;
+  background-repeat: repeat-y, round;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bg {
+  0% {
+    background-position: 12% 0, 0;
+  }
+
+  100% {
+    background-position: 12% -100vh, -100vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes ticket {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.landing {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  transition:
+    opacity 0.5s ease-in,
+    transform 0.5s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.landing.out>* {
+  opacity: 0;
+  transform: translateX(20px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.landing img {
+  position: absolute;
+}
+
+#yuli {
+  max-height: 95%;
+  margin: auto;
+  bottom: 0;
+  z-index: 1;
+  animation: intro 2.5s;
+  transition:
+    inherit;
+}
+
+#comp {
+  max-width: 12%;
+  z-index: 2;
+  right: 10%;
+  bottom: -5%;
+  animation: intro 2s;
+  transition:
+    inherit;
+}
+
+#anchor {
+  max-width: 20%;
+  z-index: 2;
+  left: 10%;
+  margin-top: -30px;
+  animation: introboat 2s;
+  transition:
+    inherit;
+}
+
+#boat {
+  max-width: 22%;
+  min-width: 200px;
+  z-index: 2;
+  right: 100px;
+  animation: intro 1.5s;
+  transition:
+    inherit;
+}
+
+@media screen and (max-width: 950px) {
+  #comp {
+    display: none;
+    flex: 0%;
   }
+
+  #anchor {
+    display: none;
+    flex: 0%;
+  }
+}
+
+@keyframes intro {
+  from {
+    transform: translateX(-800px);
+    opacity: 5%;
+  }
+}
+
+@keyframes introboat {
+  from {
+    transform: translateY(-100px);
+    opacity: 5%;
+  }
+}
+
+@keyframes out {
   to {
-    transform: rotate(360deg);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+button {
+  font-family: zenless;
+  display: block;
+  color: #a2a2a2;
+  font-size: x-large;
+  border-radius: 20px;
+  border: 5px solid #000000;
+  background: #303030;
+  box-shadow: 0 0 0 2px #383839;
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: inherit;
+}
+
+.body {
+  background-image: none;
+  background-color: none;
+  box-shadow: 0 0 0 2px #373737 inset;
+  background: repeating-linear-gradient(45deg,
+      #2b2b2b,
+      #2b2b2b 4px,
+      #303030,
+      #303030 8px);
+  border: 4px solid #000000;
+  border-radius: 15px;
+  margin: 30px 20px 20px 55%;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  color: #fbfbfb;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: zenless;
+  font-size: small;
+  letter-spacing: 1px;
+  overflow: auto;
+  animation: transition 1s;
+  transition: height 1s ease-in-out;
+}
+
+
+@keyframes transition {
+  from {
+    opacity: 5%;
+    transform: translateX(-100px);
+  }
+}
+
+
+.profile {
+  background-color: #000000;
+  margin: 5% 0% 0% 0%;
+  padding: 2% 5% 2% 5%;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.profile>div {
+  margin-right: 10px;
+}
+
+#nepslogo {
+  flex: 0 1 100px;
+  aspect-ratio: 1/1;
+  max-width: 150px;
+  min-width: 100px;
+  border-left: 2px solid #1c1c1c;
+  padding-left: 10%;
+}
+
+@media screen and (max-width: 1300px) {
+  #nepslogo {
+    display: none;
+    flex: 0%;
+  }
+}
+
+h2 {
+  color: #b6b6b6;
+}
+
+.stats {
+  flex: 1;
+  padding: 3% 5% 2% 5%;
+  color: #cecece;
+}
+
+.stats>div {
+  background-color: #383839;
+  border-radius: 50px;
+  border: 3.5px solid #030303;
+  text-align: left;
+}
+
+.stats h3 {
+  margin: 6px;
+  padding-left: 10px;
+
+}
+
+ul li {
+  background: #000000;
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 10px;
+  font-size: small;
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px #373737;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0 0 0;
+}
+
+li a {
+  text-decoration: none;
+  color: #cecece;
+}
+
+a:hover {
+  color: #a2a2a2;
+}
+
+footer {
+  text-align: right;
+  margin: 0 5% 0 55%;
+}
+
+nav {
+  margin: 0 25%;
+}
+
+footer p {
+  margin: 5% 1.5% 0 0;
+  color: #b6b6b6;
+  font-family: zenless;
+  font-size: small;
+}
+
+#gear {
+  border-radius: 0 40px 40px 0;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#prof {
+  border-radius: 40px 0 0 40px;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+nav a {
+  font-family: zenless;
+  text-decoration: none;
+  font-size: x-large;
+  padding: 2px 30px;
+  background: #0b0b0b;
+  color: #fafafa;
+  border: 5px solid #383839;
+  margin: 0 -10px;
+  position: relative;
+  z-index: 1;
+}
+
+nav .active {
+  background: #a2c000;
+  color: #030900;
+  padding: 15px 20px;
+  border: 0px;
+  z-index: 10;
+}
+
+.gears {
+  display: block;
+  bottom: 10%;
+  gap: 15%;
+  height: 20%;
+  position: absolute;
+}
+
+.gears>img {
+  height: 100px;
+  width: auto;
+  margin-left: 20px;
+}
+
+.body>h1,
+#site,
+#nhl,
+#turner {
+  margin: 20px 20px 20px 20px;
+  padding: 2%;
+  line-height: 20px;
+  background-color: #1c1c1c;
+  border: 4px solid #0b0b0b;
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px #2b2b2b inset;
+  animation: pissmyself 1s ease-in-out;
+}
+
+@keyframes pissmyself {
+  from {
+    opacity: 0
   }
 }
