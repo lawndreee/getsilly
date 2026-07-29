@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/getsilly/static/css/main.42411ac9.css",
-    "main.js": "/getsilly/static/js/main.0a9027a0.js",
+    "main.js": "/getsilly/static/js/main.026c66ce.js",
     "static/js/453.e9e7ec89.chunk.js": "/getsilly/static/js/453.e9e7ec89.chunk.js",
     "static/media/zenless.ttf": "/getsilly/static/media/zenless.50a5fc40d2f0f75c8ff0.ttf",
     "static/media/yuli.png": "/getsilly/static/media/yuli.daa54b2892b90d00e2ef.png",
@@ -17,11 +17,11 @@
     "static/media/neps.png": "/getsilly/static/media/neps.e6aaa2ef3dd0c8014c01.png",
     "index.html": "/getsilly/index.html",
     "main.42411ac9.css.map": "/getsilly/static/css/main.42411ac9.css.map",
-    "main.0a9027a0.js.map": "/getsilly/static/js/main.0a9027a0.js.map",
+    "main.026c66ce.js.map": "/getsilly/static/js/main.026c66ce.js.map",
     "453.e9e7ec89.chunk.js.map": "/getsilly/static/js/453.e9e7ec89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42411ac9.css",
-    "static/js/main.0a9027a0.js"
+    "static/js/main.026c66ce.js"
   ]
 }
