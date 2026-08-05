@@ -66,8 +66,8 @@ function Header() {
             </div>
             <footer>
                 <nav>
-                    <NavLink id="prof" tag = {Link} to="/profile" end>Profile</NavLink>
-                    <NavLink id="gear" tag = {Link} to="/gear" end>Gear</NavLink>
+                    <NavLink id="prof" as = {Link} to="/profile" end>Profile</NavLink>
+                    <NavLink id="gear" as = {Link} to="/gear" end>Gear</NavLink>
                 </nav>
                 <p>
                     UI Inspiration and logos from Zenless Zone Zero <br></br>
