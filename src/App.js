@@ -29,10 +29,16 @@ function App() {
     return (
         <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/getsilly" element={<LandingPage />} />
+
 
             <Route element={<Header />}>
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/getsilly/profile" element={<Profile />} />
+
                 <Route path="/gear" element={<Gear />} />
+                <Route path="/getsilly/gear" element={<Gear />} />
+
             </Route>
         </Routes>
     );
