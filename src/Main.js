@@ -10,7 +10,7 @@ function Profile() {
                     <h1>Cindy Pei</h1>
                 </div>
                 <div>
-                    <img id="nepslogo" loading="lazy" src={neps} alt=""></img>
+                    <img id="nepslogo" loading="lazy" src={neps} alt=""/>
                 </div>
             </div>
             <div className="stats">

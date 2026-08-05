@@ -46,9 +46,9 @@ function Gear() {
                     </p></div>
             </div>
             <div class="gears">
-            <img src={siteboat} style={{filter: activeDiv === 'site' ? 'brightness(55%)' : 'none'}} onClick={() => setActiveDiv('site')}></img>
-            <img src={nhlboat} style={{filter: activeDiv === 'nhl' ? 'brightness(55%)' : 'none'}} onClick={() => setActiveDiv('nhl')}></img>
-            <img src={turnerboat} style={{filter: activeDiv === 'turner' ? 'brightness(55%)' : 'none'}} onClick={() => setActiveDiv('turner')}></img>
+            <img src={siteboat} style={{filter: activeDiv === 'site' ? 'brightness(55%)' : 'none'}} onClick={() => setActiveDiv('site')}/>
+            <img src={nhlboat} style={{filter: activeDiv === 'nhl' ? 'brightness(55%)' : 'none'}} onClick={() => setActiveDiv('nhl')}/>
+            <img src={turnerboat} style={{filter: activeDiv === 'turner' ? 'brightness(55%)' : 'none'}} onClick={() => setActiveDiv('turner')}/>
             </div>
         </>
     );

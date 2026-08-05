@@ -47,10 +47,10 @@ function LandingPage() {
     return (
         <div class={`landing ${isExiting ? 'out' : ''}`}>
             <button type="button" class="landingbut" onClick={yayStart} id="exitb">Choose Character</button>
-            <img id="yuli" src={yuli}></img>
-            <img id="boat" src={boat}></img>
-            <img id="comp" src={compass}></img>
-            <img id="anchor" src={anchor}></img>
+            <img id="yuli" src={yuli}/>
+            <img id="boat" src={boat}/>
+            <img id="comp" src={compass}/>
+            <img id="anchor" src={anchor}/>
         </div>
     );
 }
@@ -59,7 +59,7 @@ function Header() {
     return (
         <>
         <header>
-            <Link to="/"><img id="back" src={back}></img></Link>
+            <Link to="/"><img id="back" src={back}/></Link>
         </header>
             <div>
                 <Outlet />
