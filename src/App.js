@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route, NavLink, useNavigate, Outlet, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, NavLink, useNavigate, Outlet, Link, useLocation } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
 import './App.css';
@@ -15,12 +15,17 @@ import compass from './assets/compass.png';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-    <HashRouter>
+    <React.StrictMode>
+    <HashRouter basename={process.env.PUBLIC_URL}>
         <App />
     </HashRouter>
+    </React.StrictMode>
 )
 
 function App() {
+    const location = useLocation();
+    console.log("React Router is looking for this exact path:", location.pathname);
+
     return (
         <Routes>
             <Route path="/" element={<LandingPage />} />
